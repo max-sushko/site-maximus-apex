@@ -24,3 +24,19 @@ h1 em,h2 em{color:#58b2bb!important}.eyebrow{color:#367d9c!important}.button-pri
 .apex-booking-button:focus-visible{outline:3px solid #63b7ff;outline-offset:4px}
 .apex-booking-button:active{transform:translateY(0)}
 @media(prefers-reduced-motion:reduce){.apex-booking-button{transition:none}}
+
+/* Hero booking: match the schedule card's 518px desktop column width. */
+.hero.hero-with-booking{
+  max-width:none;margin-left:0;margin-right:0;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:80px;
+  align-items:center
+}
+.hero-with-booking .hero-copy{min-width:0;max-width:696px}
+.hero-with-booking .hero-booking{
+  width:100%;max-width:518px;margin:0;justify-self:center;align-self:center
+}
+.hero-booking .apex-booking-button{width:100%;min-height:64px;font-size:18px}
+@media(max-width:800px){
+  .hero.hero-with-booking{grid-template-columns:minmax(0,1fr);gap:36px}
+  .hero-with-booking .hero-booking{max-width:none}
+}
