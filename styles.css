@@ -218,3 +218,48 @@ h1 em,h2 em{color:#58b2bb!important}.eyebrow{color:#367d9c!important}.button-pri
   .work-collage-image{width:calc(50% - 6px)}
   .work-gallery-caption{font-size:16px}
 }
+
+/* Scroll drum effect: content curls behind the fixed header as it leaves the viewport. */
+html{
+  background:#07152c;
+}
+main{
+  perspective:1500px;
+  perspective-origin:50% 0;
+  transform-style:preserve-3d;
+}
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  isolation:isolate;
+}
+.site-header::after{
+  content:'';
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-18px;
+  height:22px;
+  pointer-events:none;
+  background:linear-gradient(to bottom,rgba(7,21,44,.28),transparent);
+  opacity:.72;
+}
+.drum-surface{
+  position:relative;
+  z-index:1;
+  transform-style:preserve-3d;
+  transform-origin:50% 0;
+  backface-visibility:hidden;
+  will-change:transform,filter;
+}
+@media(max-width:800px){
+  main{perspective:1200px}
+  .drum-surface{transform-origin:50% 0}
+}
+@media(prefers-reduced-motion:reduce){
+  .drum-surface{
+    transform:none!important;
+    filter:none!important;
+  }
+}
