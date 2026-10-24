@@ -287,3 +287,12 @@ main{
   background:linear-gradient(to top,rgba(7,21,44,.28),transparent);
   opacity:.72;
 }
+
+/* Keep the 3D curl inside the viewport and above the page surfaces. */
+html,
+body{
+  overflow-x:hidden;
+}
+.footer{
+  z-index:101!important;
+}
