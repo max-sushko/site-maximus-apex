@@ -65,3 +65,65 @@ h1 em,h2 em{color:#58b2bb!important}.eyebrow{color:#367d9c!important}.button-pri
   font-size:16px;
   line-height:1.5;
 }
+
+/* Selected work gallery beside the Book a Visit copy. */
+.work-gallery{
+  min-width:0;
+  align-self:center;
+}
+.work-collages{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+  min-height:330px;
+}
+.work-collage{
+  position:relative;
+  flex:0 0 51%;
+  height:300px;
+}
+.work-collage img{
+  position:absolute;
+  width:88%;
+  height:76%;
+  object-fit:cover;
+  background:#fff;
+  border:7px solid #fff;
+  box-shadow:0 14px 30px #07152c38;
+  border-radius:2px;
+}
+.work-collage img:first-child{
+  left:0;
+  top:9%;
+  transform:rotate(-6deg);
+  z-index:1;
+}
+.work-collage img:last-child{
+  right:0;
+  top:0;
+  transform:rotate(6deg);
+  z-index:2;
+}
+.work-collage-washer{
+  margin-left:-8%;
+}
+.work-gallery-caption{
+  max-width:520px;
+  margin:20px auto 0;
+  color:var(--muted);
+  text-align:center;
+  font-size:17px;
+  line-height:1.45;
+}
+@media(max-width:800px){
+  .work-gallery{
+    margin-top:8px;
+  }
+  .work-collages{
+    min-height:300px;
+  }
+  .work-gallery-caption{
+    font-size:16px;
+  }
+}
