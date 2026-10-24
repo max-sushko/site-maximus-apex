@@ -263,3 +263,27 @@ main{
     filter:none!important;
   }
 }
+
+/* Fixed footer bar with a matching lower drum edge. */
+main{
+  padding-bottom:78px!important;
+}
+.footer{
+  position:fixed!important;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:101;
+  width:100%;
+}
+.footer::before{
+  content:'';
+  position:absolute;
+  left:0;
+  right:0;
+  top:-20px;
+  height:24px;
+  pointer-events:none;
+  background:linear-gradient(to top,rgba(7,21,44,.28),transparent);
+  opacity:.72;
+}
