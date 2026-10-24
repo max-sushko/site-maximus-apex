@@ -127,3 +127,61 @@ h1 em,h2 em{color:#58b2bb!important}.eyebrow{color:#367d9c!important}.button-pri
     font-size:16px;
   }
 }
+
+/* Collage layout: preserve the approved pairs and keep each key detail visible. */
+.work-collages{
+  min-height:360px;
+}
+.work-collage{
+  flex:0 0 50%;
+  height:330px;
+}
+.work-collage img{
+  width:104%;
+  height:78%;
+}
+.work-collage img:first-child{
+  left:-2%;
+  top:8%;
+  z-index:2;
+}
+.work-collage img:last-child{
+  right:-2%;
+  top:0;
+  z-index:1;
+}
+.work-collage-dryer img{
+  width:94%;
+  height:82%;
+}
+.work-collage-dryer img:first-child{
+  left:-2%;
+  top:8%;
+}
+.work-collage-dryer img:last-child{
+  right:-5%;
+  top:1%;
+}
+.work-collage-washer{
+  margin-left:-6%;
+}
+.work-collage-washer img{
+  width:128%;
+  height:64%;
+}
+.work-collage-washer img:first-child{
+  left:-16%;
+  top:14%;
+}
+.work-collage-washer img:last-child{
+  right:-18%;
+  top:3%;
+}
+@media(max-width:800px){
+  .work-collages{
+    min-height:330px;
+  }
+  .work-collage{
+    height:300px;
+  }
+}
