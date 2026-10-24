@@ -296,3 +296,18 @@ body{
 .footer{
   z-index:101!important;
 }
+
+
+/* Keep both navigation bars fixed while page surfaces curl underneath. */
+.site-header{
+  position:fixed!important;
+  top:0;
+  left:0;
+  right:0;
+  width:100%;
+  z-index:102!important;
+}
+main{
+  padding-top:74px!important;
+  padding-bottom:78px!important;
+}
