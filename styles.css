@@ -323,3 +323,14 @@ main{
 .drum-surface label,
 .drum-surface [role="button"]{pointer-events:auto}
 .apex-booking-button{touch-action:manipulation}
+
+
+/* Let mobile taps reach interactive descendants through the 3D content layer. */
+main{pointer-events:none}
+main a,
+main button,
+main input,
+main select,
+main textarea,
+main label,
+main [role="button"]{pointer-events:auto}
