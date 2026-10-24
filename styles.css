@@ -6,8 +6,21 @@
 h1 em,h2 em{color:#58b2bb!important}.eyebrow{color:#367d9c!important}.button-primary{background:#58b2bb!important;color:#17284f!important}.button-primary:hover{background:#76c7cb!important}.service-strip{background:#dce9ef!important}.contact-section{background:#e6f0f3!important}
 
 
-/* Housecall Pro booking button */
-.booking-widget{display:flex;align-items:center;margin-top:24px}
-.hcp-button{display:inline-flex;align-items:center;justify-content:center;gap:14px;border:0;border-radius:4px;padding:16px 28px;background:linear-gradient(135deg,#030b18 0%,#0c2854 46%,#236ed0 100%);color:#fff;font:700 15px 'DM Sans',sans-serif;letter-spacing:.02em;cursor:pointer;box-shadow:0 0 28px #2f8cff55,0 12px 28px #07152c40;transition:transform .2s ease,box-shadow .2s ease}
-.hcp-button span{font-size:20px;color:#63b7ff}
-.hcp-button:hover{transform:translateY(-2px);box-shadow:0 0 36px #2f8cff88,0 16px 34px #07152c55}
+/* Site-owned booking button. HCPWidget uses the token in its script URL.
+   Avoid hcp-button: the provider injects pill-button styles for that class. */
+.booking-widget{display:flex;align-items:center;margin:24px 0 36px;min-width:0}
+.apex-booking-button{
+  appearance:none;display:inline-flex;align-items:center;justify-content:center;
+  gap:14px;min-height:56px;max-width:100%;margin:0;padding:16px 28px;
+  border:0;border-radius:0;
+  background:linear-gradient(135deg,#030b18 0%,#0c2854 46%,#236ed0 100%);
+  color:#fff;font:700 15px/1.4 'DM Sans',sans-serif;letter-spacing:.02em;
+  text-transform:none;text-decoration:none;cursor:pointer;
+  box-shadow:0 0 34px #2f8cff55,0 14px 35px #07152c40;
+  transition:transform .2s ease,box-shadow .2s ease
+}
+.apex-booking-button span{font-size:20px;color:#63b7ff}
+.apex-booking-button:hover{transform:translateY(-2px);box-shadow:0 0 36px #2f8cff88,0 16px 34px #07152c55}
+.apex-booking-button:focus-visible{outline:3px solid #63b7ff;outline-offset:4px}
+.apex-booking-button:active{transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.apex-booking-button{transition:none}}
