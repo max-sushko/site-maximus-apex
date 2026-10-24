@@ -185,3 +185,36 @@ h1 em,h2 em{color:#58b2bb!important}.eyebrow{color:#367d9c!important}.button-pri
     height:300px;
   }
 }
+
+/* Client-supplied collages: use the approved finished compositions as-is. */
+.work-collages{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  min-height:0;
+}
+.work-collage-image{
+  display:block;
+  width:calc(50% - 9px);
+  height:auto;
+  max-width:100%;
+  border:0;
+  box-shadow:0 14px 30px #07152c38;
+  border-radius:2px;
+}
+.work-collage-one{transform:rotate(-2deg)}
+.work-collage-two{transform:rotate(2deg)}
+.work-gallery-caption{
+  max-width:520px;
+  margin:20px auto 0;
+  color:var(--muted);
+  text-align:center;
+  font-size:17px;
+  line-height:1.45;
+}
+@media(max-width:800px){
+  .work-collages{gap:12px}
+  .work-collage-image{width:calc(50% - 6px)}
+  .work-gallery-caption{font-size:16px}
+}
