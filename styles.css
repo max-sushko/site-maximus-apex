@@ -311,3 +311,15 @@ main{
   padding-top:74px!important;
   padding-bottom:78px!important;
 }
+
+
+/* Keep links and controls tappable above the transformed drum surfaces. */
+.drum-surface{pointer-events:none}
+.drum-surface a,
+.drum-surface button,
+.drum-surface input,
+.drum-surface select,
+.drum-surface textarea,
+.drum-surface label,
+.drum-surface [role="button"]{pointer-events:auto}
+.apex-booking-button{touch-action:manipulation}
